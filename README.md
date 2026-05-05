@@ -51,3 +51,9 @@ Upon successfully completing the associated assignments, learners are issued a d
 - 11:30-12:00: In-class hands-on assessment #3 
 - 12:00-12:30: Helpdesk (Optional)
 
+
+--- 
+
+We aim to make our online resources accessible to everyone. 
+If you encounter any barriers in the materials contained in this repository, please report them through our support request form
+https://colorado.service-now.com/req_portal?id=ucb_sc_rc_form
