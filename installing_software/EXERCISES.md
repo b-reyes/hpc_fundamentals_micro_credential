@@ -144,8 +144,7 @@ echo $CURC_CONTAINER_DIR
 ls $CURC_CONTAINER_DIR
 ```
 
-A Singularity Definition File (or “def file” for short) is like a set of blueprints explaining how to build a custom container. It includes specifics about the base OS to build or the base container to start from, software to install, environment variables to set at runtime, files to add from the host system, and container metadata. 
-More information from the Apptainer user guide: https://apptainer.org/docs/user/1.0/definition_files.html
+An Apptainer Definition File (or “def file” for short) is like a set of blueprints explaining how to build a custom container. It includes specifics about the base OS to build or the base container to start from, software to install, environment variables to set at runtime, files to add from the host system, and container metadata. More information from the Apptainer user guide: https://apptainer.org/docs/user/1.0/definition_files.html
 
 Check out the definition file for the `mach3_build.sif` container.
 SIF = **S**ingularity **I**mage **F**ile
@@ -162,16 +161,16 @@ For example:
 ###  Pull an image from a pre-built container, then run the program from the container. 
 We are going to create a containerized version of samtools using the Docker image found here: https://hub.docker.com/r/staphb/samtools
 
-Note that, by default, the cache directory for Singularity builds is `/scratch/alpine/$USER`.
+Note that, by default, the cache directory for Apptainer builds is `/scratch/alpine/$USER`.
 ```
 echo $APPTAINER_CACHEDIR 
 ```
 
-Use the `apptainer pull` command to create a `.sif` file from the Docker image.
-`apptainer pull samtools.sif docker://staphb/samtools`
+Use the `apptainer pull` command to create a `.sif` file from the Docker image (here we place the created image in `/projects/$USER/samtools.sif`): 
+`apptainer pull /projects/$USER/samtools.sif docker://staphb/samtools`
 
 
-Run samtools from the container. Is it the same version of samtools you got from conda and building from source? 
+Run samtools from the container. Is it the same version of samtools you got from Mamba and building from source? 
 
 Bonus question: How do `samtools_env`, `samtools.sif`, and the source installation compare in size?
 
