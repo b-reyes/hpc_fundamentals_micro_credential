@@ -144,7 +144,7 @@ echo $CURC_CONTAINER_DIR
 ls $CURC_CONTAINER_DIR
 ```
 
-An Apptainer Definition File (or “def file” for short) is like a set of blueprints explaining how to build a custom container. It includes specifics about the base OS to build or the base container to start from, software to install, environment variables to set at runtime, files to add from the host system, and container metadata. More information from the Apptainer user guide: https://apptainer.org/docs/user/1.0/definition_files.html
+An Apptainer Definition File (or “def file” for short) is like a set of blueprints explaining how to build a custom container. It includes specifics about the base OS to build or the base container to start from, software to install, environment variables to set at runtime, files to add from the host system, and container metadata. More information from the Apptainer user guide: https://apptainer.org/docs/user/latest/definition_files.html
 
 Check out the definition file for the `mach3_build.sif` container.
 SIF = **S**ingularity **I**mage **F**ile
